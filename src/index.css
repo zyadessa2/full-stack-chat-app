@@ -1,0 +1,12 @@
+.bg-signin{
+    background-color: #F5E6F1 ;
+}
+.borderbuttonSignin{
+    background-color: #A22CFF !important;
+}
+.forgetpass{
+    cursor: pointer;
+}
+.noaccount{
+    cursor: pointer;
+}
