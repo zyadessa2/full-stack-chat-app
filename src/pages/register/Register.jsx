@@ -3,7 +3,7 @@ import {  createUserWithEmailAndPassword , updateProfile} from "firebase/auth";
 import { auth , db, storage } from '../../fireBase';
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { doc , setDoc } from "firebase/firestore"; 
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Register = () => {
     const [err , setErr] = useState(false)
@@ -67,11 +67,11 @@ const Register = () => {
                     {err && <span>someyjing went wrong</span> }
                     {/* <span className='text-center forgetpass fs-6 text-primary'>Forget your password?</span> */}
                     </form>
-                    <div className="SIWG d-flex flex-column position-relative align-items-center">
+                    {/* <div className="SIWG d-flex flex-column position-relative align-items-center">
                         <span className='or mb-1'>or use</span>
                         <button className='w-75 borderbutton btn btn-primary'>Sign in with google</button>
-                    </div>
-                    <p className='ps-4 pt-3 pb-1 fs-6 noaccount text-danger'>Have an account? Sign in</p>
+                    </div> */}
+                    <p className='ps-4 pt-3 pb-1 fs-6 noaccount text-danger'>Have an account? <Link to='/login'>Sign in</Link></p>
                 </div>
             </div>
         </div>
