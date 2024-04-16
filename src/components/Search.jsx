@@ -67,8 +67,8 @@ const Search = () => {
     }catch(err){}
     setUser(null)
     setUsername('')
-    setDisplay("d-block")
-    setSideDisplay("d-none")
+    // setDisplay("d-block")
+    // setSideDisplay("d-none")
   }
 
   return (
