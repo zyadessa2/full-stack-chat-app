@@ -27,8 +27,12 @@ export const ChatContextProvider = ({children})=>{
     
     const [state, dispatch] = useReducer(chatReducer , INITIAL_STATE)
 
+    const [display, setDisplay] = useState('d-none')
+    const [sideDisplay, setSideDisplay] = useState('d-block')
+
+
     return(
-        <ChatContext.Provider value={{data:state , dispatch}} >
+        <ChatContext.Provider value={{data:state , dispatch , display , setDisplay ,sideDisplay ,setSideDisplay}} >
             {children}
         </ChatContext.Provider>
     )
